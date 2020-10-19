@@ -1,3 +1,4 @@
+@import url('https://basehold.it/12');
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -10,16 +11,19 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 
 /* Base Styles */
 html {
-  background: #222;
-  color: #EEE;
-  padding: 16px;
+  background: #EEE;
+  color: #222;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 19px;
+  line-height: 24px;
+  padding: 24px;
 }
 h1,
 h2,
 figcaption,
 nav,
 p {
-  padding: 8px;
+  padding-bottom: 24px; /* Full line-height */
 }
 
 /*
@@ -32,13 +36,8 @@ section {
 }
 */
 
-section {
-  background: red;
-}
 h1 {
-  padding: 8px;
-  border: 20px solid yellow;
-  background: blue;
+  padding: 24px 0;
 }
 /* Responsive Images */
 img {
@@ -52,14 +51,14 @@ img {
 
 /* Modular */
 .nav li {
-  padding-bottom: 8px;
+  padding-bottom: 6px;
 }
 .nav a {
   display: block;
   text-decoration: none;
   background: #ecd0aa;
   color: #222;
-  padding: 16px;
+  padding: 12px;
 }
 .nav a:hover {
   background: #a6733d;
@@ -79,7 +78,7 @@ img {
     width: 33.3333333333%;
   }
   .nav a {
-    margin-right: 8px;
+    margin-right: 12px;
   }
   .nav li:last-child a {
     margin-right: 0;
@@ -99,14 +98,14 @@ img {
     width: 50%;
   }
   figure {
-    margin-bottom: 32px;
+    margin-bottom: 36px;
     clear: both;
     float: none;
   }
   figcaption {
     padding-left: 52%; /* All browsers get this close-enough value... */
-    padding-left: calc(50% + 16px); /* calc()-supporting browsers get the precise value. */
-    padding-right: 16px;
+    padding-left: calc(50% + 12px); /* calc()-supporting browsers get the precise value. */
+    padding-right: 12px;
   }
 }
 
