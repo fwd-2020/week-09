@@ -9,6 +9,11 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 
 /* Begin site styles below */
 
+/*
+  Baseline grid: 24px
+  Base font-size: 19px
+*/
+
 /* Base Styles */
 html {
   background: #EEE;
