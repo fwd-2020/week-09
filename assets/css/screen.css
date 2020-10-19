@@ -23,6 +23,25 @@ html {
   line-height: 24px;
   padding: 24px;
 }
+
+@supports (display: grid) {
+  /* No L/R padding when we have grid...*/
+  html { padding: 24px 0; }
+}
+
+body {
+  /* ...because we'll use columns to keep the content away from the edge of the viewport */
+  display: grid;
+  grid-template-columns: minmax(24px,1fr) minmax(min-content,45ch) minmax(24px,1fr);
+}
+
+header,
+nav,
+section {
+  grid-column: 2 / 3;
+}
+
+
 h1,
 h2,
 figcaption,
