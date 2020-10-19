@@ -71,6 +71,7 @@ img {
 /* State */
 
 @media screen and (min-width: 330px) {
+/*
   .nav::after {
     content: "";
     display: block;
@@ -86,6 +87,19 @@ img {
     margin-right: 12px;
   }
   .nav li:last-child a {
+    margin-right: 0;
+  }
+*/
+  .nav {
+    display: flex;
+    /* gap: 12px; We need to figure out how to @supports this... */
+  }
+  .nav li {
+    flex: 1 1 auto;
+    text-align: center;
+    margin-right: 12px;
+  }
+  .nav li:last-child {
     margin-right: 0;
   }
 }
