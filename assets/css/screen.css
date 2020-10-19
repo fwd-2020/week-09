@@ -71,7 +71,10 @@ img {
 /* State */
 
 @media screen and (min-width: 330px) {
-/*
+  .nav {
+    display: flex;
+    /* gap: 12px; We need to figure out how to @supports this... */
+  }
   .nav::after {
     content: "";
     display: block;
@@ -79,29 +82,30 @@ img {
     float: none;
   }
   .nav li {
-    float: left;
     text-align: center;
-    width: 33.3333333333%;
+
+    /* Handle layout with floats */
+    float: left;
+    width: 33.3333333333%; /* NOT for flexbox */
+
+    /* Handle layout with flexbox */
+    flex: 1 1 auto;
   }
+
+  @supports (display: flex) {
+    .nav li {
+      width: auto;
+    }
+  }
+
+  /* Set margin right for floated or flexed items' anchor tags: */
   .nav a {
     margin-right: 12px;
   }
   .nav li:last-child a {
     margin-right: 0;
   }
-*/
-  .nav {
-    display: flex;
-    /* gap: 12px; We need to figure out how to @supports this... */
-  }
-  .nav li {
-    flex: 1 1 auto;
-    text-align: center;
-    margin-right: 12px;
-  }
-  .nav li:last-child {
-    margin-right: 0;
-  }
+
 }
 
 @media screen and (min-width: 400px) {
